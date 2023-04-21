@@ -102,3 +102,14 @@ body {
     margin-bottom: 0px;
     
   }
+
+  .get-inline{display:inline-block;}
+
+  .checkbox {
+    height: 20px;
+    width: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
