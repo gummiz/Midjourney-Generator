@@ -1,17 +1,29 @@
 function generatePromptOutput() {
     const mainIdea = document.getElementById('mainIdea').value;
+    
     const aspectRatio = document.getElementById('aspectRatio').value;
+    
     const medium = document.getElementById('medium').value;
+    
     const camera = document.getElementById('camera').value;
+    
     const lighting = document.getElementById('lighting').value;
+    
     const descriptor = document.getElementById('descriptor').value;
     const descriptor2 = document.getElementById('descriptor2').value;
+
+    const backgroundInput = document.getElementById('background');
+    const background = backgroundInput.value ? `on ${backgroundInput.value} background` : '';
+    
     const artistInput = document.getElementById('artist');
     const artist = artistInput.value ? `by ${artistInput.value}` : '';
+    
     const filmInput = document.getElementById('film');
     const film = filmInput.value ? `${filmInput.value} film style` : '';
 
-    const promptOutput = `/imagine prompt: ${medium} of ${mainIdea} ${artist} ${camera} ${descriptor2}, ${descriptor} ${lighting} ${film} --ar ${aspectRatio} --v 5`;
+
+
+    const promptOutput = `/imagine prompt: ${medium} of ${mainIdea} ${artist} ${camera} ${background} ${descriptor2} ${descriptor} ${lighting} ${film} --ar ${aspectRatio} --v 5`;
 
     document.getElementById('promptOutput').value = promptOutput.trim();
 
