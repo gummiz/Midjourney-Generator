@@ -1,0 +1,99 @@
+/* Add some CSS styling here */
+body {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .outer-wrapper {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+  textarea {
+
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+
+  #promptOutput {
+    height: 200px;
+  }
+
+  #promptOutput {
+    height: 300px;
+    border: 0px solid #434343;
+    background-color: #f1f1f1;
+    font-size: 1.1rem;
+
+  }
+
+
+  button {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  button:hover {
+    background-color: #757de8;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 16px;
+  }
+
+  .copyNotification {
+    display: none;
+    /* background-color: #44a8d8; */
+    color: rgb(119, 179, 93);
+    /* padding: 8px 10px; */
+    /* border-radius: 4px; */
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    margin-left: 20px;
+  }
+
+  .copyNotification.show {
+    display: inline-block;
+    opacity: 1;
+  }
