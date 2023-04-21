@@ -25,7 +25,7 @@
         <div>
           <label for="aspectRatio">Aspect Ratio:</label>
           <select id="aspectRatio">
-
+            <option value="1:1">1:1</option>
             <option value="16:9">16:9</option>
             <option value="4:3">4:3</option>
             <option value="3:4">3:4</option>
@@ -82,6 +82,8 @@
               <option value="comic book">Comic book</option>
               <option value="digital art">Digital art</option>
               <option value="flyer">Flyer</option>
+              <option value="Flash Sheet">Flash Sheet</option>
+              <option value="Folk Art">Folk Art</option>
               <option value="greeting card">Greeting card</option>
               <option value="icon">Icon</option>
               <option value="IKEA guide">IKEA guide</option>
@@ -93,6 +95,7 @@
               <option value="magazine">Magazine</option>
               <option value="map">Map</option>
               <option value="mosaic">Mosaic</option>
+              
               <option value="movie poster">Movie poster</option>
               <option value="newspaper">Newspaper</option>
               <option value="photorealism">Photorealism</option>
@@ -307,6 +310,7 @@
           <label for="camera">Camera:</label>
           <select id="camera">
             <optgroup label="Small to large">
+              <option value="">None</option>
               <option value="panorama">Panorama</option>
               <option value="portrait">Portrait</option>
               <option value="landscape">Landscape</option>
@@ -354,6 +358,7 @@
           <label for="lighting">Lighting:</label>
           <select id="lighting">
             <optgroup label="Styles">
+              <option value="">None</option>
               <option value="ambient lighting">Ambient lighting</option>
               <option value="backlighting">Backlighting</option>
               <option value="black light">Black light</option>
@@ -951,7 +956,7 @@
     <h3>Generated Prompt</h3>
     <div>
       <!-- <input type="text" id="promptOutput" readonly> -->
-      <textarea rows="8" id="promptOutput" readonly></textarea>
+      <textarea rows="8" id="promptOutput" ></textarea>
       <button id="copyButton" onclick="copyPromptOutput()">Copy Prompt</button>
       <!-- <button id="copyButton" onclick="copyToClipboard()">Copy Prompt</button> -->
 
