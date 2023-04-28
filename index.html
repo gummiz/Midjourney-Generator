@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/script.js"></script>
-  
+
 </head>
 
 <body>
@@ -18,7 +18,8 @@
     <div class="container">
       <h3 for="mainIdea">Subject Description</h3>
       <!-- <input type="text" id="mainIdea" placeholder="Enter the main idea"><br> -->
-      <textarea rows="8" id="mainIdea" placeholder="a woman walking, a man talking, a dog running, a daisy flower,..."></textarea>
+      <textarea rows="8" id="mainIdea"
+        placeholder="a woman walking, a man talking, a dog running, a daisy flower,..."></textarea>
 
       <div class="grid">
         <!-- Add the rest of the input fields -->
@@ -95,7 +96,7 @@
               <option value="magazine">Magazine</option>
               <option value="map">Map</option>
               <option value="mosaic">Mosaic</option>
-              
+
               <option value="movie poster">Movie poster</option>
               <option value="newspaper">Newspaper</option>
               <option value="photorealism">Photorealism</option>
@@ -307,8 +308,8 @@
         </div>
 
         <div>
-          <label for="camera">Camera:</label>
-          <select id="camera">
+          <label for="view">View:</label>
+          <select id="view">
             <optgroup label="Small to large">
               <option value="">None</option>
               <option value="panorama">Panorama</option>
@@ -941,7 +942,7 @@
             <option value="black">Black</option>
             <option value="red">Red</option>
 
-            
+
           </select>
         </div>
 
@@ -954,18 +955,19 @@
           <label for="film">Film:</label>
           <input type="text" id="film" placeholder="Enter the film name">
         </div>
-        
+
         <!-- Tile Checkbox -->
         <div>
-          <span class="get-inline"><input type="checkbox" id="tile" class="checkbox"></span>
-          <span class="get-inline"><label for="tile">Tile</label></span>
-          
+          <div class="checkbox-div">
+            <span class="get-inline"><input type="checkbox" id="tile" class="checkbox"></span>
+            <span class="get-inline"><label for="tile">Tile</label></span>
+          </div>
         </div>
 
 
       </div>
 
-  
+
 
 
       <!-- Follow the "aspectRatio" pattern for the other dropdowns -->
@@ -978,7 +980,7 @@
     <h3>Generated Prompt</h3>
     <div>
       <!-- <input type="text" id="promptOutput" readonly> -->
-      <textarea rows="8" id="promptOutput" ></textarea>
+      <textarea rows="8" id="promptOutput"></textarea>
       <button id="copyButton" onclick="copyPromptOutput()">Copy Prompt</button>
       <!-- <button id="copyButton" onclick="copyToClipboard()">Copy Prompt</button> -->
 
