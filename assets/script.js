@@ -1,25 +1,32 @@
 function generatePromptOutput() {
-  const mainIdea = document.getElementById('mainIdea').value;
+  const mainIdeaInput = document.getElementById('mainIdea');
+  const mainIdea = mainIdeaInput.value ? `${mainIdeaInput.value} |`: "";
 
   const aspectRatio = document.getElementById('aspectRatio').value;
 
   const medium = document.getElementById('medium').value;
 
-  const camera = document.getElementById('camera').value;
+  const cameraInput = document.getElementById('camera');
+  const camera = cameraInput.value ? `Camera: ${cameraInput.value} |`: "";  
 
-  const lighting = document.getElementById('lighting').value;
+  const lightingInput = document.getElementById('lighting');
+  const lighting = lightingInput.value ? `${lightingInput.value} |`: "";  
 
-  const descriptor = document.getElementById('descriptor').value;
-  const descriptor2 = document.getElementById('descriptor2').value;
+  const descriptorInput = document.getElementById('descriptor');
+  const descriptor = descriptorInput.value ? `${descriptorInput.value} |` : '';
+
+
+  const descriptorInput2 = document.getElementById('descriptor2');
+  const descriptor2 = descriptorInput2.value ? `${descriptorInput2.value} |` : '';
 
   const backgroundInput = document.getElementById('background');
-  const background = backgroundInput.value ? `on ${backgroundInput.value} background` : '';
+  const background = backgroundInput.value ? `on ${backgroundInput.value} background |` : '';
 
   const artistInput = document.getElementById('artist');
-  const artist = artistInput.value ? `by ${artistInput.value}` : '';
+  const artist = artistInput.value ? `by ${artistInput.value} |` : '';
 
   const filmInput = document.getElementById('film');
-  const film = filmInput.value ? `${filmInput.value} film style` : '';
+  const film = filmInput.value ? `${filmInput.value} film style |` : '';
 
   // Tile Checkbox 
   const tileInput = document.getElementById('tile');
