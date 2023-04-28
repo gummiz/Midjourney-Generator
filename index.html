@@ -24,7 +24,7 @@
       <div class="grid">
         <!-- Add the rest of the input fields -->
         <div>
-          <label for="aspectRatio">Aspect Ratio:</label>
+          <label for="aspectRatio">Aspect Ratio</label>
           <select id="aspectRatio">
             <option value="1:1">1:1</option>
             <option value="16:9">16:9</option>
@@ -35,7 +35,7 @@
         </div>
 
         <div>
-          <label for="medium">Medium:</label>
+          <label for="medium">Medium</label>
           <select id="medium">
             <option value="">None</option>
             <optgroup label="Art Movements">
@@ -308,10 +308,11 @@
         </div>
 
         <div>
-          <label for="view">View:</label>
+          <label for="view">View</label>
           <select id="view">
+            <option value="">None</option>
             <optgroup label="Small to large">
-              <option value="">None</option>
+              
               <option value="panorama">Panorama</option>
               <option value="portrait">Portrait</option>
               <option value="landscape">Landscape</option>
@@ -356,7 +357,90 @@
         </div>
 
         <div>
-          <label for="lighting">Lighting:</label>
+          <label for="camera">Camera</label>
+          <select id="camera">
+            <optgroup label="2020s">
+              <option value="Nikon Z7 II">Nikon Z7 II</option>
+              <option value="Canon EOS R5">Canon EOS R5</option>
+              <option value="Sony Alpha A7S III">Sony Alpha A7S III</option>
+              <option value="Panasonic Lumix S5">Panasonic Lumix S5</option>
+              <option value="Fujifilm X-T4">Fujifilm X-T4</option>
+            </optgroup>
+            <optgroup label="2010s">
+              <option value="Nikon D850">Nikon D850</option>
+              <option value="Canon EOS 5D Mark IV">Canon EOS 5D Mark IV</option>
+              <option value="Pentax K-1">Pentax K-1</option>
+              <option value="Sony Alpha A7R III">Sony Alpha A7R III</option>
+              <option value="Fujifilm X-T4">Fujifilm X-T4</option>
+            </optgroup>
+            <optgroup label="2000s">
+              <option value="Nikon D3">Nikon D3</option>
+              <option value="Canon EOS 5D">Canon EOS 5D</option>
+              <option value="Pentax K10D">Pentax K10D</option>
+              <option value="Olympus E-3">Olympus E-3</option>
+              <option value="Sony Alpha A900">Sony Alpha A900</option>
+            </optgroup>
+            <optgroup label="1990s">
+              <option value="Nikon F4">Nikon F4</option>
+              <option value="Canon EOS 1N">Canon EOS 1N</option>
+              <option value="Pentax PZ-1">Pentax PZ-1</option>
+              <option value="Olympus OM-4T">Olympus OM-4T</option>
+              <option value="Minolta Maxxum 9">Minolta Maxxum 9</option>
+            </optgroup>
+            <optgroup label="1980s">
+              <option value="Nikon F3">Nikon F3</option>
+              <option value="Canon T90">Canon T90</option>
+              <option value="Pentax Super Program">Pentax Super Program</option>
+              <option value="Olympus OM-3">Olympus OM-3</option>
+              <option value="Minolta Maxxum 7000">Minolta Maxxum 7000</option>
+            </optgroup>
+            <optgroup label="1970s">
+              <option value="Nikon F2">Nikon F2</option>
+              <option value="Canon AE-1">Canon AE-1</option>
+              <option value="Pentax K1000">Pentax K1000</option>
+              <option value="Olympus OM-1">Olympus OM-1</option>
+              <option value="Minolta X-700">Minolta X-700</option>
+            </optgroup>
+            <optgroup label="1960s">
+              <option value="Nikon F">Nikon F</option>
+              <option value="Canon F-1">Canon F-1</option>
+              <option value="Pentax Spotmatic">Pentax Spotmatic</option>
+              <option value="Leica M4">Leica M4</option>
+              <option value="Minolta SRT-101">Minolta SRT-101</option>
+            </optgroup>
+            <optgroup label="1950s">
+              <option value="Nikon S2">Nikon S2</option>
+              <option value="Leica M3">Leica M3</option>
+              <option value="Canon 7">Canon 7</option>
+              <option value="Contax IIa">Contax IIa</option>
+              <option value="Rolleiflex TLR">Rolleiflex TLR</option>
+            </optgroup>
+            <optgroup label="1940s">
+              <option value="Leica IIIC">Leica IIIC</option>
+              <option value="Contax II">Contax II</option>
+              <option value="Argus C3">Argus C3</option>
+              <option value="Exakta VX">Exakta VX</option>
+              <option value="Kodak Retina II">Kodak Retina II</option>
+            </optgroup>
+            <optgroup label="1930s">
+              <option value="Alpa Reflex">Alpa Reflex</option>
+              <option value="Leica III">Leica III</option>
+              <option value="Kodak Retina I">Kodak Retina I</option>
+              <option value="Zeiss Super Nettel">Zeiss Super Nettel</option>
+              <option value="Voigtlander Bessa">Voigtlander Bessa</option>
+            </optgroup>
+            <optgroup label="1920s">
+              <option value="Leica I">Leica I</option>
+              <option value="Zeiss Ikon">Zeiss Ikon</option>
+              <option value="Kodak Brownie">Kodak Brownie</option>
+              <option value="Ermanox">Ermanox</option>
+              <option value="Agfa Billy Record">Agfa Billy Record</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div>
+          <label for="lighting">Lighting</label>
           <select id="lighting">
             <optgroup label="Styles">
               <option value="">None</option>
@@ -460,7 +544,7 @@
         </div>
 
         <div>
-          <label for="descriptor">Descriptor:</label>
+          <label for="descriptor">Descriptor</label>
           <select id="descriptor">
             <option value="">None</option>
             <optgroup label="Realism">
@@ -697,7 +781,7 @@
         </div>
 
         <div>
-          <label for="descriptor2">Descriptor 2:</label>
+          <label for="descriptor2">Descriptor 2</label>
           <select id="descriptor2">
             <option value="">None</option>
 
@@ -947,12 +1031,12 @@
         </div>
 
         <div>
-          <label for="artist">Artist:</label>
+          <label for="artist">Artist</label>
           <input type="text" id="artist" placeholder="Enter the artist name">
         </div>
 
         <div>
-          <label for="film">Film:</label>
+          <label for="film">Film</label>
           <input type="text" id="film" placeholder="Enter the film name">
         </div>
 

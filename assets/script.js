@@ -9,6 +9,9 @@ function generatePromptOutput() {
   const viewInput = document.getElementById('view');
   const view = viewInput.value ? `View: ${viewInput.value} |`: "";  
 
+  const cameraInput = document.getElementById('camera');
+  const camera = cameraInput.value ? `Camera: ${cameraInput.value} |`: "";  
+
   const lightingInput = document.getElementById('lighting');
   const lighting = lightingInput.value ? `${lightingInput.value} |`: "";  
 
@@ -38,7 +41,7 @@ function generatePromptOutput() {
   }
 
 
-  const promptOutput = `/imagine prompt: ${medium} of ${mainIdea} ${artist} ${view} ${background} ${descriptor2} ${descriptor} ${lighting} ${film} ${tile} --ar ${aspectRatio} --v 5`;
+  const promptOutput = `/imagine prompt: ${medium} of ${mainIdea} ${artist} ${view} ${camera} ${background} ${descriptor} ${descriptor2} ${lighting} ${film} ${tile} --ar ${aspectRatio} --v 5`;
 
   document.getElementById('promptOutput').value = promptOutput.trim();
 
