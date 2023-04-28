@@ -1,22 +1,33 @@
 function generatePromptOutput() {
-  const mainIdeaInput = document.getElementById('mainIdea');
-  const mainIdea = mainIdeaInput.value ? `${mainIdeaInput.value} |`: "";
 
+  // Subject
+  const mainIdeaInput = document.getElementById('mainIdea');
+  const mainIdea = mainIdeaInput.value ? `${mainIdeaInput.value} |` : "";
+
+  // Aspect Ration
   const aspectRatio = document.getElementById('aspectRatio').value;
 
+  // Medium
   const medium = document.getElementById('medium').value;
 
+  // View
   const viewInput = document.getElementById('view');
-  const view = viewInput.value ? `View: ${viewInput.value} |`: "";  
+  const view = viewInput.value ? `View: ${viewInput.value} |` : "";
 
+  // Camera
   const cameraInput = document.getElementById('camera');
-  const camera = cameraInput.value ? `Camera: ${cameraInput.value} |`: "";  
+  const camera = cameraInput.value ? `Camera: ${cameraInput.value} |` : "";
 
+  // Lenses
   const lensInput = document.getElementById('lens');
-  const lens = lensInput.value ? `Lens: ${lensInput.value} |`: ""; 
+  const lens = lensInput.value ? `Lens: ${lensInput.value} |` : "";
+
+  // Films
+  const filmsInput = document.getElementById('films');
+  const films = filmsInput.value ? `${filmsInput.value} |` : "";
 
   const lightingInput = document.getElementById('lighting');
-  const lighting = lightingInput.value ? `${lightingInput.value} |`: "";  
+  const lighting = lightingInput.value ? `${lightingInput.value} |` : "";
 
   const descriptorInput = document.getElementById('descriptor');
   const descriptor = descriptorInput.value ? `${descriptorInput.value} |` : '';
@@ -43,8 +54,8 @@ function generatePromptOutput() {
     tile = "--tile";
   }
 
-
-  const promptOutput = `/imagine prompt: ${medium} of ${mainIdea} ${artist} ${view} ${camera} ${lens} ${background} ${descriptor} ${descriptor2} ${lighting} ${film} ${tile} --ar ${aspectRatio} --v 5`;
+  // Output
+  const promptOutput = `/imagine prompt: ${medium} of ${mainIdea} ${background} ${artist} ${view} ${camera} ${lens} ${films} ${descriptor} ${descriptor2} ${lighting} ${film} ${tile} --ar ${aspectRatio} --v 5`;
 
   document.getElementById('promptOutput').value = promptOutput.trim();
 
