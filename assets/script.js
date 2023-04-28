@@ -12,6 +12,9 @@ function generatePromptOutput() {
   const cameraInput = document.getElementById('camera');
   const camera = cameraInput.value ? `Camera: ${cameraInput.value} |`: "";  
 
+  const lensInput = document.getElementById('lens');
+  const lens = lensInput.value ? `Lens: ${lensInput.value} |`: ""; 
+
   const lightingInput = document.getElementById('lighting');
   const lighting = lightingInput.value ? `${lightingInput.value} |`: "";  
 
@@ -41,7 +44,7 @@ function generatePromptOutput() {
   }
 
 
-  const promptOutput = `/imagine prompt: ${medium} of ${mainIdea} ${artist} ${view} ${camera} ${background} ${descriptor} ${descriptor2} ${lighting} ${film} ${tile} --ar ${aspectRatio} --v 5`;
+  const promptOutput = `/imagine prompt: ${medium} of ${mainIdea} ${artist} ${view} ${camera} ${lens} ${background} ${descriptor} ${descriptor2} ${lighting} ${film} ${tile} --ar ${aspectRatio} --v 5`;
 
   document.getElementById('promptOutput').value = promptOutput.trim();
 
