@@ -114,6 +114,6 @@ body {
     background-color: #fff;
   }
 
-  .checkbox-div {
-    
+  html {
+    scroll-behavior: smooth;
   }

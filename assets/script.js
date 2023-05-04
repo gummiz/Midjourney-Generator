@@ -61,6 +61,7 @@ function generatePromptOutput() {
 
   // After setting the prompt output value, update the copy button visibility
   toggleCopyButtonVisibility();
+  jumpToCopy();
 }
 
 function init() {
@@ -85,6 +86,7 @@ function init() {
 
 
 
+
 }
 
 window.onload = init;
@@ -99,6 +101,9 @@ function toggleCopyButtonVisibility() {
   }
 }
 
+function jumpToCopy() {
+  
+}
 
 function copyPromptOutput() {
   const copyText = document.getElementById('promptOutput');
