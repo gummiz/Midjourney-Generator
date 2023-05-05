@@ -55,7 +55,7 @@ function generatePromptOutput() {
   }
 
   // Output
-  const promptOutput = `/imagine prompt: ${medium} of ${mainIdea} ${background} ${artist} ${view} ${camera} ${lens} ${films} ${descriptor} ${descriptor2} ${lighting} ${film} ${tile} --ar ${aspectRatio} --v 5`;
+  const promptOutput = `/imagine prompt: ${medium} of ${mainIdea} ${background} ${artist} ${view} ${camera} ${lens} ${films} ${descriptor} ${descriptor2} ${lighting} ${film} ${tile} --ar ${aspectRatio} --v 5.1`;
 
   document.getElementById('promptOutput').value = promptOutput.trim();
 
