@@ -1,5 +1,9 @@
 function generatePromptOutput() {
 
+  // Medium
+  const mediumInput = document.getElementById('medium');
+  const medium = mediumInput.value ? `${mediumInput.value} of` : "";
+
   // Subject
   const mainIdeaInput = document.getElementById('mainIdea');
   const mainIdea = mainIdeaInput.value ? `${mainIdeaInput.value} |` : "";
@@ -7,8 +11,6 @@ function generatePromptOutput() {
   // Aspect Ration
   const aspectRatio = document.getElementById('aspectRatio').value;
 
-  // Medium
-  const medium = document.getElementById('medium').value;
 
   // View
   const viewInput = document.getElementById('view');
@@ -55,7 +57,7 @@ function generatePromptOutput() {
   }
 
   // Output
-  const promptOutput = `/imagine prompt: ${medium} of ${mainIdea} ${background} ${artist} ${view} ${camera} ${lens} ${films} ${descriptor} ${descriptor2} ${lighting} ${film} ${tile} --ar ${aspectRatio} --v 5.1`;
+  const promptOutput = `/imagine prompt: ${medium} ${mainIdea} ${background} ${artist} ${view} ${camera} ${lens} ${films} ${descriptor} ${descriptor2} ${lighting} ${film} ${tile} --ar ${aspectRatio} --v 5.1`;
 
   document.getElementById('promptOutput').value = promptOutput.trim();
 
@@ -102,7 +104,7 @@ function toggleCopyButtonVisibility() {
 }
 
 function jumpToCopy() {
-  
+
 }
 
 function copyPromptOutput() {
