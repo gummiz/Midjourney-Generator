@@ -97,8 +97,9 @@ function generatePromptOutput() {
     film,
     tile,
     aspectRatio,
+    raw,
     ignore,
-    raw
+    
   ];
 
   // Filter out any empty strings
