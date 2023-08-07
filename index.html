@@ -28,8 +28,11 @@
           <select id="aspectRatio">
             <option value="1:1">1:1</option>
             <option value="16:9">16:9</option>
+            <option value="9:16">9:16</option>
             <option value="4:3">4:3</option>
             <option value="3:4">3:4</option>
+            <option value="2:3">2:3</option>
+            <option value="3:2">3:2</option>
             <!-- Add other aspect ratio options -->
           </select>
         </div>
@@ -1133,16 +1136,19 @@
           </div>
         </div>
 
-        <label class="switch">
+        <!-- <label class="switch">
           <input type="checkbox">
           <span class="slider"></span>
-        </label>
+        </label> -->
 
-
+        
 
       </div>
 
-
+      <div>
+        <label for="ignore">Ignored Words:</label>
+        <textarea rows="2" id="ignore"></textarea>
+      </div>
 
 
       <!-- Follow the "aspectRatio" pattern for the other dropdowns -->
