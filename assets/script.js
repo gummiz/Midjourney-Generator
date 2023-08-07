@@ -61,6 +61,10 @@ function generatePromptOutput() {
   const tileInput = document.getElementById("tile");
   const tile = tileInput.checked ? `--tile` : "";
 
+  // Raw Checkbox
+  const rawInput = document.getElementById("raw");
+  const raw = rawInput.checked ? `--style raw` : "";
+
   // if (tileInput.checked) {
 
   //   tile = "--tile";
@@ -94,6 +98,7 @@ function generatePromptOutput() {
     tile,
     aspectRatio,
     ignore,
+    raw
   ];
 
   // Filter out any empty strings
