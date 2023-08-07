@@ -7,6 +7,11 @@
  */
 
 function generatePromptOutput() {
+
+  // Image URL
+  const imageUrlInput = document.getElementById("imageurl");
+  const imageUrl = imageUrlInput.value ? `${imageUrlInput.value} |` : "";
+
   // Medium
   const mediumInput = document.getElementById("medium");
   const medium = mediumInput.value ? `${mediumInput.value} of` : "";
@@ -83,6 +88,7 @@ function generatePromptOutput() {
 
   // Create an array to hold all the values
   const promptValues = [
+    imageUrl,
     medium,
     mainIdea,
     background,
