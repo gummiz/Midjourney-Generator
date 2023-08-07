@@ -96,10 +96,9 @@ function generatePromptOutput() {
     lighting,
     film,
     tile,
-    aspectRatio,
     raw,
+    aspectRatio,
     ignore,
-    
   ];
 
   // Filter out any empty strings
@@ -110,7 +109,7 @@ function generatePromptOutput() {
 
   document.getElementById("promptOutput").value = promptOutput.trim();
 
-  document.getElementById("promptOutput").value = promptOutput.trim();
+  // document.getElementById("promptOutput").value = promptOutput.trim();
 
   // After setting the prompt output value, update the copy button visibility
   toggleCopyButtonVisibility();
