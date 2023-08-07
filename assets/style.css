@@ -179,3 +179,11 @@ body {
   .slider.round::before {
     border-radius: 50%;
   }
+
+  textarea {
+    resize: none;
+  }
+  
+  /* #imageurl textarea {
+    white-space: nowrap;
+  } */
