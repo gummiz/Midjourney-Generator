@@ -26,12 +26,16 @@
   <body>
     <div class="outer-wrapper">
       <div class="container">
-        <h2 class="hero">Midjourney Prompt Generator</h2>
+        <div class="hero" ><h2>Midjourney Prompt Generator </h2> v0.4</div>
+        <!-- <h2 class="hero"></h2> -->
 
         <div id="intro">
           <hr />
           <div class="description">
-            A little helper to create complex prompts in <a href="https://midjourney.com/" target="_blank">Midjourney.</a> Created by Stefan Kummerlöw. Get in touch: <a href="https://bit.ly/kummerloewLinkedIn" target="_blank">LinkedIn</a>, <a href="https://github.com/gummiz" target="_blank">GitHub</a>, <a href="https://x.com/tadaaptive" target="_blank">X</a>
+            A handy tool for generating advanced prompts in  <a href="https://midjourney.com/" target="_blank">Midjourney</a>. 
+            Version 0.4 - September 2023 - <a href="https://github.com/gummiz/Midjouney-Generator" target="_blank">Git Repository</a>
+            <br>Developed by Stefan Kummerlöw.
+            Connect with me on <a href="https://bit.ly/kummerloewLinkedIn" target="_blank">LinkedIn</a>, <a href="https://github.com/gummiz" target="_blank">GitHub</a>, <a href="https://x.com/tadaaptive" target="_blank">X</a> and  <a href="http://www.instagram.com/gummizzzz" target="_blank" rel="noopener noreferrer">Instagram</a> 
           </div>
           
           <!-- <div id="creator">Created by Stefan Kummerlöw. Get in touch: <a href="https://bit.ly/kummerloewLinkedIn" target="_blank">LinkedIn</a>, <a href="https://github.com/gummiz" target="_blank">GitHub</a>, <a href="https://x.com/tadaaptive" target="_blank">X</a></div> -->
@@ -813,7 +817,17 @@
           </div>
 
           <div>
-            <label for="descriptor">Descriptor</label>
+            <label for="background">Background Color</label>
+            <select id="background">
+              <option value="">None</option>
+              <option value="white">White</option>
+              <option value="black">Black</option>
+              <option value="red">Red</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="descriptor">Descriptor I</label>
             <select id="descriptor">
               ∏
               <option value="">None</option>
@@ -1069,7 +1083,7 @@
           </div>
 
           <div>
-            <label for="descriptor2">Descriptor 2</label>
+            <label for="descriptor2">Descriptor II</label>
             <select id="descriptor2">
               <option value="">None</option>
 
@@ -1324,15 +1338,7 @@
             </select>
           </div>
 
-          <div>
-            <label for="background">Background Color</label>
-            <select id="background">
-              <option value="">None</option>
-              <option value="white">White</option>
-              <option value="black">Black</option>
-              <option value="red">Red</option>
-            </select>
-          </div>
+
 
           <div>
             <label for="artist">Artist</label>
