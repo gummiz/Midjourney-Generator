@@ -166,6 +166,10 @@ textarea {
   resize: none;
 }
 
+textarea::placeholder, input::placeholder {
+  color: #aaaaaa;
+}
+
 
 #footer-text {
   margin-top: 20px;
