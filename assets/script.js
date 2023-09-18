@@ -147,9 +147,13 @@ window.onload = init;
 function toggleCopyButtonVisibility() {
   const outputField = document.getElementById("promptOutput");
   const copyButton = document.getElementById("copyButton");
+  const output = document.getElementById("output");
+  
   if (outputField.value.trim() === "") {
-    copyButton.style.display = "none";
+    output.style.display = "none";
+    // copyButton.style.display = "none";
   } else {
+    output.style.display = "inline-block";
     copyButton.style.display = "inline-block";
   }
 }
@@ -161,18 +165,6 @@ function copyPromptOutput() {
   copyText.select();
   document.execCommand("copy");
 
-  // alert('Copied the prompt output: ' + copyText.value);
-
-  // // show notification
-  // var promptOutput = document.getElementById("promptOutput");
-  // promptOutput.select();
-  // document.execCommand("copy");
-  // var notification = document.getElementById("copyNotification");
-  // notification.innerHTML = "Prompt copied";
-  // notification.classList.add("show");
-  // setTimeout(function () {
-  //   notification.classList.remove("show");
-  // }, 3000);
 
   // Get the button element
   var button = document.getElementById("copyButton");

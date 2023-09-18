@@ -7,21 +7,47 @@
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
     />
     <link rel="stylesheet" href="assets/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
     <script src="assets/script.js"></script>
   </head>
 
   <body>
     <div class="outer-wrapper">
-      <h1>Midjourney Prompt Generator</h1>
-
       <div class="container">
-        <h3 for="mainIdea">Subject Description</h3>
-        <!-- <input type="text" id="mainIdea" placeholder="Enter the main idea"><br> -->
-        <textarea
-          rows="8"
-          id="mainIdea"
-          placeholder="a woman walking, a man talking, a dog running, a daisy flower,..."
-        ></textarea>
+        <h2 class="hero">Midjourney Prompt Generator</h2>
+
+        <div id="intro">
+          <hr />
+          <div class="description">
+            A little helper to create complex prompts in <a href="https://midjourney.com/" target="_blank">Midjourney.</a> Created by Stefan Kummerlöw. Get in touch: <a href="https://bit.ly/kummerloewLinkedIn" target="_blank">LinkedIn</a>, <a href="https://github.com/gummiz" target="_blank">GitHub</a>, <a href="https://x.com/tadaaptive" target="_blank">X</a>
+          </div>
+          
+          <!-- <div id="creator">Created by Stefan Kummerlöw. Get in touch: <a href="https://bit.ly/kummerloewLinkedIn" target="_blank">LinkedIn</a>, <a href="https://github.com/gummiz" target="_blank">GitHub</a>, <a href="https://x.com/tadaaptive" target="_blank">X</a></div> -->
+
+          <hr />
+        </div>
+
+        <!-- Main idea -->
+        <div>
+          <label for="mainIdea">Subject Description</label>
+          <textarea
+            rows="2"
+            id="mainIdea"
+            placeholder="a woman walking, a man talking, a dog running, a daisy flower,..."
+          ></textarea>
+        </div>
 
         <!-- Image URL reference -->
         <div>
@@ -1330,44 +1356,51 @@
         </div>
 
         <!-- Checkboxs -->
-        <div>
+
+        <div class="row">
           <!-- Tile -->
-          <div class="checkbox-div">
-            <span class="get-inline"
-              ><input type="checkbox" id="tile" class="checkbox"
-            /></span>
-            <span class="get-inline"><label for="tile">Tile</label></span>
+          <div class="column">
+            <div class="checkbox-div">
+              <span class="get-inline"
+                ><input type="checkbox" id="tile" class="checkbox"
+              /></span>
+              <span class="get-inline"><label for="tile">Tile</label></span>
+            </div>
           </div>
 
           <!-- Style Raw -->
-          <div class="checkbox-div">
-            <span class="get-inline"
-              ><input type="checkbox" id="raw" class="checkbox"
-            /></span>
-            <span class="get-inline"><label for="raw">Style Raw</label></span>
+          <div class="column">
+            <div class="checkbox-div">
+              <span class="get-inline"
+                ><input type="checkbox" id="raw" class="checkbox"
+              /></span>
+              <span class="get-inline"><label for="raw">Style Raw</label></span>
+            </div>
           </div>
         </div>
 
         <!-- Follow the "aspectRatio" pattern for the other dropdowns -->
-        <div>
+        <div class="copyButton">
           <a href="#copyButton"
             ><button onclick="generatePromptOutput()">
               Generate Prompt Output
             </button></a
           >
         </div>
-      </div>
-      <br /><br /><br />
-      <h3>Generated Prompt</h3>
-      <div>
-        <!-- <input type="text" id="promptOutput" readonly> -->
-        <textarea rows="8" id="promptOutput"></textarea>
-        <button id="copyButton" onclick="copyPromptOutput()">
-          Copy Prompt
-        </button>
-        <!-- <button id="copyButton" onclick="copyToClipboard()">Copy Prompt</button> -->
 
-        <span class="copyNotification" id="copyNotification"></span>
+        <div id="output">
+          <h3>Generated Prompt</h3>
+          <div>
+            <!-- <input type="text" id="promptOutput" readonly> -->
+            <textarea rows="8" id="promptOutput"></textarea>
+            <button id="copyButton" onclick="copyPromptOutput()">
+              Copy Prompt
+            </button>
+            <!-- <button id="copyButton" onclick="copyToClipboard()">Copy Prompt</button> -->
+
+            <span class="copyNotification" id="copyNotification"></span>
+          </div>
+        </div>
       </div>
     </div>
   </body>
