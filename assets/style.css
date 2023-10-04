@@ -1,3 +1,23 @@
+
+@media (max-width: 768px) {
+
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+  .parent-div {
+    flex-direction: column;
+  }
+  .new-patch {
+    font-size: 0.6em;
+    bottom: 4px;
+  }
+
+}
+
+
+
 .outer-wrapper {
   max-width: 800px;
   margin-top: 50px;
@@ -63,15 +83,6 @@ button:hover {
   gap: 16px;
 }
 
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-  }
-  .parent-div {
-    flex-direction: column;
-  }
-}
 
 .copyNotification {
   display: none;
@@ -115,6 +126,7 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -178,4 +190,121 @@ textarea::placeholder, input::placeholder {
 #footer-text {
   margin-top: 20px;
   font-size: 1.4rem;
+}
+
+
+.new-patch {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background-color: #757de8;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.7em;
+  position: relative;
+  bottom: 2px;
+
+}
+
+.engine {
+  display: flex;
+  padding-bottom: 1.2em;
+}
+
+.engine span {
+  position: relative;
+  top: 2px;
+}
+
+.engine-selection {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+
+/* .engine-selection input, .engine-selection label {
+  flex: 1;
+} */
+
+.engine-selection input {
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.engine-selection label {
+  padding-right: 20px;
+}
+
+
+
+.options {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #141414;
+  padding:  3;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+
+  input {
+    display: none;
+  }
+ 
+.options input, .options label {
+  flex: 1;
+}
+
+  /* .options > label */
+  > label {
+    display: inline-block;
+    position: relative;
+    /* margin-right: 49px;
+    padding-left: ; */
+    cursor: pointer;
+
+    /* .options > label:before
+    this creates the outer circle for faux radio button  */
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 50%;
+      margin-top: -8px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+    }
+
+    /* .options > label:after
+     this creates the inner circle for active faux radio button */
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 50%;
+      left: 8px;
+      margin-top: 0;
+      background: #fff;
+      border-radius: 4px;
+      transition: .2s ease-in-out;
+    }
+  }
+
+  /* .options :checked + label:after */
+  :checked + label {
+    &:after {
+      height: 8px;
+      width: 8px;
+      margin-top: -4px;
+      left: 4px;
+    }
+  }
 }

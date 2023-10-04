@@ -6,11 +6,106 @@
  *
  */
 
-function generatePromptOutput() {
+//  async function checkEngine() {
+//   console.log("engine check")
+//   const radioMJ = await document.getElementById("mj");
+//   const radioDalle = await document.getElementById("dalle");
+//   const imageURLBlock = await document.getElementById("imageURLBlock");
 
+//   radioMJ.addEventListener("change", () => {
+//     if (radioMJ.checked) {
+//       imageURLBlock.style.display = "block";
+//       console.log("moin1");
+//     }
+//   });
+
+//   radioDalle.addEventListener("change", () => {
+//     if (radioMJ.checked) {
+//       imageURLBlock.style.display = "none";
+//       console.log("moin2");
+//     }
+//   });
+// }
+// window.onload = checkEngine();
+
+function init() {
+  engineSettings();
+  document
+    .getElementById("promptOutput")
+    .addEventListener("input", toggleCopyButtonVisibility);
+
+  // Call the function initially to set the button visibility on the first load
+  toggleCopyButtonVisibility();
+
+  // Hide Output once Input gets new content
+  var inputTextarea = document.getElementById("mainIdea");
+  var outputTextarea = document.getElementById("promptOutput");
+  var myButton = document.getElementById("copyButton");
+
+  inputTextarea.addEventListener("input", function () {
+    outputTextarea.value = "";
+    myButton.textContent = "Copy Prompt";
+    myButton.style.display = "none";
+  });
+}
+
+window.onload = init;
+function engineSettings() {
+  console.log("engine check")
+  const radioMJ = document.getElementById("mj");
+  const radioDalle = document.getElementById("dalle");
+
+  const imageurl = document.getElementById("imageurl");
+  const imageurlLabel = document.getElementById("imageurlLabel");
+  
+  
+  const aspectRatio = document.getElementById("aspectRatio");
+  const aspectRatioLabel = document.getElementById("aspectRatioLabel");
+
+
+
+
+  function setMJ() {
+    if (radioMJ.checked) {
+      imageurl.disabled = false;
+      imageurl.opacity = 1;
+      imageurlLabel.style.color = "#606c76";
+      
+      
+      //enable Aspect Ratio
+      aspectRatio.disabled = false;
+      aspectRatio.opacity = 1;
+      aspectRatioLabel.style.color = "#606c76"
+      
+    }
+  }
+  
+  function setDalle() {
+    if (radioDalle.checked) {
+      imageurl.disabled = true;
+      imageurl.opacity = 0.1;
+      imageurlLabel.style.color = "#bfbfbf";
+      
+      
+      //disable Aspect Ratio
+      aspectRatio.disabled = true;
+      aspectRatio.opacity = 0.5;
+      aspectRatioLabel.style.color = "#bfbfbf"
+    }
+  }
+
+  radioMJ.addEventListener("change", setMJ);
+  radioDalle.addEventListener("change", setDalle);
+}
+
+
+
+function generatePromptOutput() {
   // Image URL
   const imageUrlInput = document.getElementById("imageurl");
   const imageUrl = imageUrlInput.value ? `${imageUrlInput.value} |` : "";
+
+  //////////
 
   // Medium
   const mediumInput = document.getElementById("medium");
@@ -111,7 +206,16 @@ function generatePromptOutput() {
   const filteredPromptValues = promptValues.filter((value) => value);
 
   // Join all the values with a space
-  const promptOutput = `/imagine prompt: ${filteredPromptValues.join(" ")}`;
+  let promptOutput = "";
+  // const promptOutputDalle = `${filteredPromptValues.join(" ")}`;
+
+  // Engine
+  const engine = document.getElementById("mj");
+  if (engine.checked) {
+    promptOutput = `/imagine prompt: ${filteredPromptValues.join(" ")}`;
+  } else {
+    promptOutput = `${filteredPromptValues.join(" ")}`;
+  }
 
   document.getElementById("promptOutput").value = promptOutput.trim();
 
@@ -122,33 +226,13 @@ function generatePromptOutput() {
   jumpToCopy();
 }
 
-function init() {
-  document
-    .getElementById("promptOutput")
-    .addEventListener("input", toggleCopyButtonVisibility);
 
-  // Call the function initially to set the button visibility on the first load
-  toggleCopyButtonVisibility();
-
-  // Hide Output once Input gets new content
-  var inputTextarea = document.getElementById("mainIdea");
-  var outputTextarea = document.getElementById("promptOutput");
-  var myButton = document.getElementById("copyButton");
-
-  inputTextarea.addEventListener("input", function () {
-    outputTextarea.value = "";
-    myButton.textContent = "Copy Prompt";
-    myButton.style.display = "none";
-  });
-}
-
-window.onload = init;
 
 function toggleCopyButtonVisibility() {
   const outputField = document.getElementById("promptOutput");
   const copyButton = document.getElementById("copyButton");
   const output = document.getElementById("output");
-  
+
   if (outputField.value.trim() === "") {
     output.style.display = "none";
     // copyButton.style.display = "none";
@@ -165,7 +249,6 @@ function copyPromptOutput() {
   copyText.select();
   document.execCommand("copy");
 
-
   // Get the button element
   var button = document.getElementById("copyButton");
 
@@ -175,3 +258,6 @@ function copyPromptOutput() {
   // Set the font family to a font that supports the checkmark symbol
   button.style.fontFamily = "Arial, sans-serif";
 }
+
+
+

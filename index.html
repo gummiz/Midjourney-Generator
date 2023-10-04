@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Midjourney Prompt Generator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
       rel="stylesheet"
@@ -28,21 +28,56 @@
   <body>
     <div class="outer-wrapper">
       <div class="container">
-        <div class="hero" ><h2>Midjourney Prompt Generator </h2> v0.4</div>
+        <div class="hero">
+          <h2>Prompt Generator for Midjourney & DALL-E 3</h2>
+        </div>
         <!-- <h2 class="hero"></h2> -->
 
         <div id="intro">
           <hr />
           <div class="description">
-            <span class="descriptionblack">A handy tool for generating advanced prompts in  <a href="https://midjourney.com/" target="_blank">Midjourney</a>. 
-            Version 0.4 - September 2023 - <a href="https://github.com/gummiz/Midjourney-Generator" target="_blank">Quickguide</a></span>
-            <br>Developed by Stefan Kummerlöw.
-            Connect with me on <a href="https://bit.ly/kummerloewLinkedIn" target="_blank">LinkedIn</a>, <a href="https://bit.ly/GithubTadaptive" target="_blank">GitHub</a>, <a href="https://bit.ly/XTadaptive" target="_blank">X</a> and  <a href="https://bit.ly/IGTadaptive  " target="_blank" rel="noopener noreferrer">Instagram</a> 
+            <span class="descriptionblack"
+              >A handy tool for generating advanced prompts in
+              <a href="https://midjourney.com/" target="_blank">Midjourney</a>
+              and <span class="new-patch">NEW</span> DALL-E 3 within
+              <a href="https://www.bing.com/create">Bing Chat</a>.
+              <br />
+              Additional help can be found in this
+
+              <a
+                href="https://github.com/gummiz/Midjourney-Generator"
+                target="_blank"
+                >Quickguide</a
+              >.</span
+            >
+            <br />Developed by Stefan Kummerlöw. Connect with me on
+            <a href="https://bit.ly/kummerloewLinkedIn" target="_blank"
+              >LinkedIn</a
+            >,
+            <a href="https://bit.ly/GithubTadaptive" target="_blank">GitHub</a>,
+            <a href="https://bit.ly/XTadaptive" target="_blank">X</a> and
+            <a
+              href="https://bit.ly/IGTadaptive  "
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
           </div>
-          
+
           <!-- <div id="creator">Created by Stefan Kummerlöw. Get in touch: <a href="https://bit.ly/kummerloewLinkedIn" target="_blank">LinkedIn</a>, <a href="https://github.com/gummiz" target="_blank">GitHub</a>, <a href="https://x.com/tadaaptive" target="_blank">X</a></div> -->
 
           <hr />
+        </div>
+
+        <!-- Select Engine -->
+        <div class="engine">
+          <span>Decide which AI tool you want to create your image with: </span>
+          <div class="engine-selection">
+            <input name="option" type="radio" id="mj" class="hide" checked />
+            <label for="midjourney">Midjourney</label>
+            <input name="option" type="radio" id="dalle" class="hide" />
+            <label for="dalle">DALL-E 3</label>
+          </div>
         </div>
 
         <!-- Main idea -->
@@ -56,26 +91,13 @@
         </div>
 
         <!-- Image URL reference -->
-        <div>
-          <label for="imageurl">Include Image-URL</label>
+        <div id="imageURLBlock">
+          <label for="imageurl" id="imageurlLabel">Include Image-URL</label>
           <input type="text" id="imageurl" placeholder="Reference Image URL" />
         </div>
 
         <div class="grid">
           <!-- Add the rest of the input fields -->
-          <div>
-            <label for="aspectRatio">Aspect Ratio</label>
-            <select id="aspectRatio">
-              <option value="1:1">1:1</option>
-              <option value="16:9">16:9</option>
-              <option value="9:16">9:16</option>
-              <option value="4:3">4:3</option>
-              <option value="3:4">3:4</option>
-              <option value="2:3">2:3</option>
-              <option value="3:2">3:2</option>
-              <!-- Add other aspect ratio options -->
-            </select>
-          </div>
 
           <div>
             <label for="medium">Medium</label>
@@ -467,62 +489,22 @@
             </select>
           </div>
 
-          <!-- Views -->
+          <!-- Aspect Ration -->
           <div>
-            <label for="view">View</label>
-            <select id="view">
-              <option value="">None</option>
-              <optgroup label="Small to large">
-                <option value="panorama">Panorama</option>
-                <option value="portrait">Portrait</option>
-                <option value="landscape">Landscape</option>
-                <option value="super-resolution microscopy">
-                  Super-resolution microscopy
-                </option>
-                <option value="microscopy">Microscopy</option>
-                <option value="macro lens">Macro lens</option>
-                <option value="pinhole lens">Pinhole lens</option>
-                <option value="first person view">First person view</option>
-                <option value="wide angle lens">Wide angle lens</option>
-                <option value="ultra-wide angle lens">
-                  Ultra-wide angle lens
-                </option>
-                <option value="fisheye lens">Fisheye lens</option>
-                <option value="telephoto lens">Telephoto lens</option>
-                <option value="tilt-shift lens">Tilt-shift lens</option>
-                <option value="telescope view">Telescope view</option>
-                <option value="drone view">Drone view</option>
-                <option value="aerial">Aerial</option>
-                <option value="from above">From above</option>
-                <option value="satellite imagery">Satellite imagery</option>
-              </optgroup>
-              <optgroup label="Other Terms">
-                <option value="backlit">Backlit</option>
-                <option value="blurry">Blurry</option>
-                <option value="bokeh">Bokeh</option>
-                <option value="depth of field">Depth of field</option>
-                <option value="grainy">Grainy</option>
-                <option value="hazy">Hazy</option>
-                <option value="high contrast">High contrast</option>
-                <option value="high-speed photography">
-                  High-speed photography
-                </option>
-                <option value="ICM">ICM</option>
-                <option value="long exposure">Long exposure</option>
-                <option value="low light">Low light</option>
-                <option value="motion blur">Motion blur</option>
-                <option value="night photography">Night photography</option>
-                <option value="shallow depth of field">
-                  Shallow depth of field
-                </option>
-                <option value="sharp">Sharp</option>
-                <option value="silhouette">Silhouette</option>
-                <option value="soft focus">Soft focus</option>
-                <option value="time-lapse">Time-lapse</option>
-                <option value="vibrant colors">Vibrant colors</option>
-              </optgroup>
+            <label for="aspectRatio" id="aspectRatioLabel">Aspect Ratio</label>
+            <select id="aspectRatio">
+              <option value="1:1">1:1</option>
+              <option value="16:9">16:9</option>
+              <option value="9:16">9:16</option>
+              <option value="4:3">4:3</option>
+              <option value="3:4">3:4</option>
+              <option value="2:3">2:3</option>
+              <option value="3:2">3:2</option>
+              <!-- Add other aspect ratio options -->
             </select>
           </div>
+
+          
 
           <!-- Camera -->
           <div>
@@ -657,6 +639,63 @@
                 <option value="135mm f/2">135mm f/2</option>
                 <option value="200mm f/2.8">200mm f/2.8</option>
                 <option value="300mm f/4">300mm f/4</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <!-- Views -->
+          <div>
+            <label for="view">View</label>
+            <select id="view">
+              <option value="">None</option>
+              <optgroup label="Small to large">
+                <option value="panorama">Panorama</option>
+                <option value="portrait">Portrait</option>
+                <option value="landscape">Landscape</option>
+                <option value="super-resolution microscopy">
+                  Super-resolution microscopy
+                </option>
+                <option value="microscopy">Microscopy</option>
+                <option value="macro lens">Macro lens</option>
+                <option value="pinhole lens">Pinhole lens</option>
+                <option value="first person view">First person view</option>
+                <option value="wide angle lens">Wide angle lens</option>
+                <option value="ultra-wide angle lens">
+                  Ultra-wide angle lens
+                </option>
+                <option value="fisheye lens">Fisheye lens</option>
+                <option value="telephoto lens">Telephoto lens</option>
+                <option value="tilt-shift lens">Tilt-shift lens</option>
+                <option value="telescope view">Telescope view</option>
+                <option value="drone view">Drone view</option>
+                <option value="aerial">Aerial</option>
+                <option value="from above">From above</option>
+                <option value="satellite imagery">Satellite imagery</option>
+              </optgroup>
+              <optgroup label="Other Terms">
+                <option value="backlit">Backlit</option>
+                <option value="blurry">Blurry</option>
+                <option value="bokeh">Bokeh</option>
+                <option value="depth of field">Depth of field</option>
+                <option value="grainy">Grainy</option>
+                <option value="hazy">Hazy</option>
+                <option value="high contrast">High contrast</option>
+                <option value="high-speed photography">
+                  High-speed photography
+                </option>
+                <option value="ICM">ICM</option>
+                <option value="long exposure">Long exposure</option>
+                <option value="low light">Low light</option>
+                <option value="motion blur">Motion blur</option>
+                <option value="night photography">Night photography</option>
+                <option value="shallow depth of field">
+                  Shallow depth of field
+                </option>
+                <option value="sharp">Sharp</option>
+                <option value="silhouette">Silhouette</option>
+                <option value="soft focus">Soft focus</option>
+                <option value="time-lapse">Time-lapse</option>
+                <option value="vibrant colors">Vibrant colors</option>
               </optgroup>
             </select>
           </div>
@@ -1340,8 +1379,6 @@
             </select>
           </div>
 
-
-
           <div>
             <label for="artist">Artist</label>
             <input
@@ -1390,14 +1427,19 @@
         <!-- Follow the "aspectRatio" pattern for the other dropdowns -->
         <div class="copyButton">
           <a href="#copyButton"
-            ><button onclick="generatePromptOutput()" class="button button-outline" >
+            ><button
+              onclick="generatePromptOutput()"
+              class="button button-outline"
+            >
               Generate Prompt Output
             </button></a
           >
+      
         </div>
 
         <div id="output">
           <h3>Generated Prompt</h3>
+          
           <div>
             <!-- <input type="text" id="promptOutput" readonly> -->
             <textarea rows="8" id="promptOutput"></textarea>
@@ -1409,12 +1451,14 @@
             <span class="copyNotification" id="copyNotification"></span>
           </div>
         </div>
-        
-        <div id="footer">
-          <hr >
-          <div id="footer-text">
-            <p>Copyright © 2023, All Rights Reserved </p>
 
+        <div id="footer">
+          <hr />
+          <div id="footer-text">
+            <p>
+              Copyright © 2023, All Rights Reserved | Version 0.41 - September
+              2023 -
+            </p>
           </div>
         </div>
       </div>
